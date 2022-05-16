@@ -1,12 +1,12 @@
 import star from "../images/icon-star.svg";
 
-const RatingCard = ({score,setScore, survey, setSurvey}) => {
+const RatingCard = ({ score, setScore, survey, setSurvey }) => {
   const ratings = [1, 2, 3, 4, 5];
   const color = "var(--med-grey)";
   // const [score, setScore] = useState(0);
 
   return (
-    <div className="rating-card">
+    <section className="rating-card">
       <div className="starDiv">
         <img className="starIcon" src={star} alt="star" />
       </div>
@@ -19,13 +19,13 @@ const RatingCard = ({score,setScore, survey, setSurvey}) => {
       <div className="rating-box">
         {ratings.map((rating) =>
           score !== rating ? (
-
             <button
               className="rating-button"
               key={rating}
               value={rating}
-              onClick={() =>{ setScore(rating)}
-              }
+              onClick={() => {
+                setScore(rating);
+              }}
             >
               {rating}
             </button>
@@ -38,7 +38,6 @@ const RatingCard = ({score,setScore, survey, setSurvey}) => {
                 key={rating}
                 value={rating}
                 style={{ backgroundColor: color }}
-               
               >
                 {rating}
               </button>
@@ -47,15 +46,16 @@ const RatingCard = ({score,setScore, survey, setSurvey}) => {
         )}
       </div>
 
-      <button 
-        className="submit-button" 
+      <button
+        className="submit-button"
         type="button"
-
-        onClick={()=>{setSurvey(score)}}
-        >
+        onClick={() => {
+          setSurvey(score);
+        }}
+      >
         SUBMIT
       </button>
-    </div>
+    </section>
   );
 };
 

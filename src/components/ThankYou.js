@@ -1,7 +1,7 @@
 import thankyou from "../images/illustration-thank-you.svg";
 const ThankYou = ({ score, setSurvey, setScore }) => {
   return (
-    <div
+    <section
       className="thankYou-card"
       onClick={() => {  
         // Reset rating card
@@ -18,7 +18,7 @@ const ThankYou = ({ score, setSurvey, setScore }) => {
         more support, don't hesitate to get in touch!
       </p>
       </div>
-    </div>
+    </section>
   );
 };
 
